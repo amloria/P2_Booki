@@ -1,5 +1,12 @@
-.html,body{
+html,body{
     font-family: 'Raleway', Sans-serif;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+h2 {
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 /* GENERAL */
 .flexcentre{
@@ -43,17 +50,17 @@
     text-decoration: none;
     color: black;
 }
-.bordurenone{
+.bordernone{
     border: none;
 }
 .textbold{
     font-weight: bold;
 }
-.sizenav{
+.nav-size{
     height: 100px;
 }
 .sizeliens{
-    width: 20%;
+    width: 100%;
 }
 .sizelien{
     width: 140px;
@@ -82,7 +89,10 @@
 }
 
 /* HEADER */
-
+.logo {
+    width: 120px;
+    height: 50px;
+}
 .borduresearch{
     width: 400px;
     border-radius: 10px;
@@ -162,211 +172,144 @@
     margin-right: 5px;
 }
 /* HEBERGEMENTS */
-.sizehebergements{
+#hebergements-populaires a, #activities a {
+    text-decoration: none;
+    color: black;
+}
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.section-hebergements, .section-populaires {
+    padding: 30px;
+}
+.bloc-cartes-hebergements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.section-hebergements{
     flex: 2;
-    height: 650px;
-    margin-right: 20px;
-    border-radius: 10px;
+    flex-direction: row;
+    margin-right: 30px;
+    border-radius: 20px;
+    padding-right: 0px
 }
-.sizepopulaires{
-    flex: 1;
-    height: 650px;
-    margin-left: 20px;
-    border-radius: 10px;
-}
-.blockhebergements{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.block1{
-    margin-bottom: 10px;
-}
-.block2{
-    margin-top: 10px;
-}
-.cubehebergements{
-    width: 30%;
-    height: auto;
-    background-color: #fff;
-    padding: 1%;
+.section-populaires{
+    flex: 1;    
     border-radius: 20px;
 }
-.cubedetailshebergements{
-    width: 90%;
+.carte-hebergement{
+    background-color: #fff;
+    border: 5px solid #fff;
+    margin: 0px 30px 30px 0px;
+    border-radius: 20px;
+    overflow: hidden;
+    width: calc(100% / 3 - 30px);
+    box-sizing: border-box
 }
-.imghebergements1{
-    background-image: url('../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
-    background-size: contain;
-    background-position: center;
+.carte-details{
     width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
-.imghebergements2{
-    background-image: url('../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
+.carte-img-hebergement {
     width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-.imghebergements3{
-    background-image: url('../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-.imghebergements4{
-    background-image: url('../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-.imghebergements5{
-    background-image: url('../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-.imghebergements6{
-    background-image: url('../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
+    height: 10vw;
+    object-fit: cover
 }
 /* POPULAIRES */
-.blockpopulaires{
-    padding-left: 20px;
-    padding-right: 20px;
+.header-populaires {
+    display: flex;
+    justify-content: space-between;
 }
-.blockpopulaires12{
-    margin-bottom: 20px;
+.bloc-cartes-populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.cubepopulaires{
-    background-color: white;
-    height: auto;
-    padding: 1% 0 1% 1%;
+.carte-populaire{
+    background-color: #fff;
+    border: 5px solid #fff;
+    margin-bottom: 30px;
     border-radius: 20px;
-    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-.cubedetailspopulaires{
+.carte-populaire a {
+    display: flex;
+}
+.carte-details-populaires{
     width: 60%;
-    padding-left: 5%;
+    padding: 10px;
+    margin-left: 10px;
+    box-sizing: border-box;
 }
-.imgpopulaires1{
-    background-image: url('../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 35%;
-    height: 160px;
-    border-radius: 15px 0 0 15px;
-}
-.imgpopulaires2{
-    background-image: url('../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 35%;
-    height: 160px;
-    border-radius: 15px 0 0 15px;
-}
-.imgpopulaires3{
-    background-image: url('../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 35%;
-    height: 160px;
-    border-radius: 15px 0 0 15px;
+.carte-img-populaire {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
 }
 /* ACTIVITES */
-.activites{
+.section-activities{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.blockactivites{
+.block-activities{
     width: 100%;
     height: 600px;
 }
-.blockactivites2356{
+.block-activities-2356{
     width: 23%;
     height: 600px;
 }
 /* BLOCK SETTINGS */
-.cubeactivites{
+.carte-activities{
     width: 23%;
     border-radius: 15px;
     box-shadow: 5px 5px 5px 1px #F2F2F2;
 }
-.cubeactivites2356{
+.carte-activities-2356{
     width: 100%;
     border-radius: 15px;
     box-shadow: 5px 5px 5px 1px #F2F2F2;
 }
 /* END BLOCK SETTINGS */
-.alttitle{
-    height: 70px;
-}
-.titleactivites{
+.carte-details-activities{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5%;
     width: 95%;
+    height: 70px;
 }
-.imgactivites1{
-    background-image: url('../images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
+.carte-img-activities {
     width: 100%;
-    height: 530px;
+    height: auto;
     border-radius: 15px 15px 0 0;
+    object-fit: cover;
 }
-.imgactivites2{
-    background-image: url('../images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.carte-img-activitie1{
+    height: 530px;
+}
+.carte-img-activitie2{
     height: 250px;
-    border-radius: 15px 15px 0 0;
 }
-.imgactivites3{
-    background-image: url('../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.carte-img-activitie3{
     height: 150px;
-    border-radius: 15px 15px 0 0;
 }
-.imgactivites4{
-    background-image: url('../images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.carte-img-activitie4{
     height: 530px;
-    border-radius: 15px 15px 0 0;
 }
-.imgactivites5{
-    background-image: url('../images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.carte-img-activitie5{
     height: 170px;
-    border-radius: 15px 15px 0 0;
 }
-.imgactivites6{
-    background-image: url('../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+.carte-img-activitie6{
     height: 220px;
-    border-radius: 15px 15px 0 0;
 }
 /* FOOTER */
 .footer{
@@ -382,3 +325,4 @@
 .marginrightfooter{
     margin-right: 25%;
 }
+/* RESPONSIVE */
