@@ -36,16 +36,29 @@
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en plein nature</p>
                 </div>
-                <div class="block-search">
+                <form action="" method="get" class="block-search">
                     <div class="block-search-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <form class="block-search-form">
+                    <div class="block-search-form">
                         <input 
                         class="form-search-txt" 
-                        type="search" 
+                        type="text" 
                         value="Marseille, France" />
-                    </form>
-                    <div class="block-search-btn">Rechercher</div>
-                </div>
+                    </div>
+                    <div class="block-search-btn">
+                        <button 
+                            name="search-icon" 
+                            class="search-btn-icon" 
+                            type="submit">
+                            <i class="fas fa-search"></i>
+                        </button >
+                        <button  
+                        name="search-txt" 
+                        class="search-btn-txt" 
+                        type="submit"
+                        value="Rechercher">Rechercher
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="block-filters">
                 <div class="header-filters">
@@ -88,7 +101,7 @@
                 <div class="header-hebergements">
                     <h2>Hébergements à Marseille</h2>
                 </div>
-                <div class="bloc-cartes-hebergements">
+                <div class="block-cartes-hebergements">
                     <article class="carte-hebergement">
                         <a href="#">
                             <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="carte-img-hebergement" alt="Auberge La Cannebière">
@@ -195,7 +208,7 @@
                     <h2>Le plus populaires</h2>
                     <div><i class="fas fa-chart-line fa-2x"></i></div>
                 </div>
-                <div class="bloc-cartes-populaires">
+                <div class="block-cartes-populaires">
                     <article class="carte-populaire">
                         <a href="#">
                             <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" class="carte-img-populaire" alt="Hôtel Le soleil du matin">

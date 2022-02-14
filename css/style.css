@@ -1,6 +1,7 @@
 html,body{
     font-family: 'Raleway', Sans-serif;
     margin: 0px auto;
+    max-width: 1199px;
 }
 header, section {
     padding-right: 30px;
@@ -57,12 +58,19 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 .block-search {
-    width: 400px;
-    border-radius: 10px;
-    border: 0.5px solid #F2F2F2;
+    justify-content: flex-start;
 }
+.block-search button:nth-child(2) {
+    border: none;
+    background-color: #0065FC;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+
 .block-search-form, .form-search-txt {
     height: 50px;
     width: 230px;
@@ -73,6 +81,9 @@ h2 {
 .form-search-txt {
     border: none;
     padding-left: 20px;
+    border: 1px solid #F2F2F2;
+    box-sizing: border-box;
+
 }
 .block-search-icon{
     width: 50px;
@@ -88,6 +99,9 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
+}
+.search-btn-icon {
+    display: none;
 }
 .block-filters {
     display: flex;
@@ -150,19 +164,19 @@ h2 {
     border-radius: 25px;
     margin-right: 5px;
 }
+.filters-txt {
+    font-weight: bold;
+}
 /* HEBERGEMENTS */
 #hebergements-populaires a, #activities a {
     text-decoration: none;
     color: black;
 }
-.section-hebergements-populaires, .bloc-cartes-hebergements {
+.section-hebergements-populaires, .block-cartes-hebergements {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.section-hebergements-populaires {
-    align-items: flex-start;
 }
 .section-hebergements, .section-populaires {
     padding: 30px;
@@ -191,7 +205,7 @@ h2 {
 }
 .carte-details{
     width: 100%;
-    padding: 10px;
+    padding: 0px 10px;
     box-sizing: border-box;
 }
 .carte-img-hebergement {
@@ -207,7 +221,7 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
-.bloc-cartes-populaires {
+.block-cartes-populaires {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -232,7 +246,7 @@ h2 {
 }
 .carte-img-populaire {
     width: 30%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
 }
 /* ACTIVITES */
@@ -309,6 +323,7 @@ h2 {
 .footer-navigation-list{
     list-style-type: none;
     width: calc(100% / 3);
+    box-sizing: border-box;
 }
 .footer-navigation-list li {
     margin-bottom: 10px;
@@ -346,6 +361,10 @@ h2 {
         display: block;
         margin: auto;
         margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    header {
+        padding: 0px;
     }
     .header-nav {
         display: block;
@@ -353,6 +372,10 @@ h2 {
     }
     .header-nav-links {
         width: 100%;
+    }
+    .header-nav-hebergements a, .header-nav-activities a {
+        height: 50px;
+        font-size: larger;
     }
     .header-nav-hebergements a {
         color: #0065FC;
@@ -364,20 +387,33 @@ h2 {
         border-top: none;
         border-bottom: 3px solid #f2f2f2;
     }
+    .header-filters {
+        width: 100%;
+    }
     .section-search-filters {
         padding-top: 15px;
     }
     .block-search {
+        width: 100%;
         margin: auto;
+    }
+    .search-btn-txt {
+        display: none;
+    }
+    .block-search-btn {
+        width: 50px;
+    }
+    .search-btn-icon {
+        display: inline-block;
+        border: none;
+        color: white;
+        background-color: #0065FC;
+        cursor: pointer;
     }
     .header-populaires, .header-hebergements {
         padding-top: 15px;
     }
-    .carte-hebergement {
-        width: 100%;
-    }
-    .block-activities, .carte-activities, .block-activities-2356, .block-cartes-hebergements {
-        display: block;
+    .block-activities, .carte-activities, .block-activities-2356, .block-cartes-hebergements, .carte-hebergement {
         height: auto;
         width: 100%;
     }
@@ -385,10 +421,12 @@ h2 {
         margin-bottom: 30px;
     }
     .carte-img-activitie1, .carte-img-activitie2, .carte-img-activitie3, .carte-img-activitie4, .carte-img-activitie5, .carte-img-activitie6 {
-        height: 100px;
-        width: 100%;
+        height: 150px;
     }
     .block-footer {
         flex-direction: column;
+    }
+    .footer-navigation-list {
+        width: 100%;
     }
 }
